@@ -7,7 +7,7 @@ resource "aws_security_group" "my-project-sg" {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = #any IP of your choosing
   }
 
   egress {
@@ -31,7 +31,7 @@ resource "aws_security_group" "sg_ecs_tasks" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = #any IP of your choosing
   }
 }
 

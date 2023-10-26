@@ -18,6 +18,3 @@ resource "aws_cloudwatch_metric_alarm" "high_4xx_errors" {
   alarm_actions   = var.topic_arn
 }
 
-# resource "aws_cloudwatch_metric_alarm" "high_5xx_errors" {
-# .
-# }

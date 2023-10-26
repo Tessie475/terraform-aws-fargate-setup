@@ -3,8 +3,6 @@ variable "topic_arn" {
     type = list(string)
 }
 
-
-
 variable "load_balancer_arn" {
   description = "The ARN of the Load Balancer"
   type        = string

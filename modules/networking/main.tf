@@ -1,18 +1,18 @@
 # Create a VPC
 resource "aws_vpc" "my_project_vpc" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = #ny IP of your choosing
 }
 
 # Create a subnet within the VPC
 resource "aws_subnet" "my_project_subnet" {
   vpc_id            = aws_vpc.my_project_vpc.id
-  cidr_block        = "10.0.10.0/24"
+  cidr_block        = #any IP of your choosing
   availability_zone = "us-east-1a"
 }
 
 resource "aws_subnet" "my_project_subnet_2" {
   vpc_id            = aws_vpc.my_project_vpc.id
-  cidr_block        = "10.0.11.0/24"
+  cidr_block        = #any IP of your choosing
   availability_zone = "us-east-1b"
 }
 

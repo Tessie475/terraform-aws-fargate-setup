@@ -30,8 +30,8 @@ resource "aws_lb_listener" "fargate_listener_https" {
   load_balancer_arn = aws_lb.fargate_alb.arn
   port              = "443"
   protocol          = "HTTPS"
-  ssl_policy        = "ELBSecurityPolicy-2016-08" # This is a commonly used SSL policy, adjust if needed
-  certificate_arn   = var.cert_arn # Replace with your ACM certificate ARN
+  ssl_policy        = "ELBSecurityPolicy-2016-08" 
+  certificate_arn   = var.cert_arn 
 
   default_action {
     type             = "forward"
